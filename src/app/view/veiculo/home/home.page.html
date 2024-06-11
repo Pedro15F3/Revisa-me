@@ -1,0 +1,35 @@
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Agendar Serviço</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="full" shape="round" (click)="irParaCadastro()">
+        Solicitar Serviços 
+        <ion-icon name="hammer-outline" slot="start"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  
+  
+  
+  <ion-list class="premium-list">
+    <ion-item button class="premium-item" (click)="levaTraz()">
+      <ion-icon name="sync-outline" slot="start"></ion-icon>
+      <ion-label>Solicitação de leva e Traz</ion-label>
+    </ion-item>
+    <ion-item button class="premium-item" (click)="irParaVeiculo()">
+      <ion-icon name="car-outline" slot="start"></ion-icon>
+      <ion-label>Veículo</ion-label>
+    </ion-item>
+    <ion-item button class="premium-item" (click)="realizado()">
+      <ion-icon name="construct" slot="start"></ion-icon>
+      <ion-label>Serviços em andamento</ion-label>
+    </ion-item>
+    <ion-item button class="premium-item" (click)="irParaConfiguracao()">
+      <ion-icon name="settings" slot="start"></ion-icon>
+      <ion-label>Configurações</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true" >
+  <ng-container *ngIf="agendamentos && agendamentos.length > 0; else noAgendamentos">
+    <ion-list class="transparent-background">
+      <ion-item *ngFor="let agendamento of agendamentos">
+        <ion-label>
+          <h2>Data: {{ agendamento.date }}</h2>
+          <p>Placa: {{ agendamento.vehicle.placa }}</p>
+          <p>Hora: {{ agendamento.time }}</p>
+          <p>Serviço: {{ agendamento.service }}</p>
+          <p>Observação: {{ agendamento.observation }}</p>
+          <p>Status: <span [ngClass]="{'texto-andamento': agendamento.status === 'Em andamento', 
+            'texto-finalizado': agendamento.status === 'Finalizado',
+            'texto-cancelado': agendamento.status === 'Cancelado',
+            'texto-agendado': agendamento.status === 'Agendado'}">{{ agendamento.status }}</span></p>
+          <!-- Adicione outras informações do agendamento aqui -->
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+  
+  <ng-template #noAgendamentos>
+    <ion-card >
+      <ion-card-header>
+        <ion-card-title>Sem Agendamentos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Não há agendamentos no momento.</p>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+</ion-content>

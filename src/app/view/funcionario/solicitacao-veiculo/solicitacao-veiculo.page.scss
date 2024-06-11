@@ -1,0 +1,19 @@
+.item-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  ion-content {
+    --background: linear-gradient(to bottom right, #ffffff, #c4c4c4);
+    padding: 16px;
+  }
+  .divider {
+    --ion-background-color: rgba(0, 0, 0, 0.1); /* Fundo levemente transparente */
+    --ion-text-color: #555; /* Cor do texto do divisor */
+    font-size: 1.2rem; /* Tamanho do texto maior */
+    font-weight: bold; /* Texto em negrito */
+    text-align: center; /* Centraliza o texto */
+    margin: 13px 0; /* Espaçamento superior e inferior */
+    padding: 10px; /* Espaçamento interno maior */
+    border-radius: 10px; /* Bordas arredondadas */
+}

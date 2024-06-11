@@ -1,0 +1,42 @@
+<ion-content>
+  <form [formGroup]="cadastrar" (ngSubmit)="cadastro()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Modelo do veiculo</ion-label>
+        <ion-input formControlName="modelo" placeholder="Insira o Modelo do veiculo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Chassi do veiculo</ion-label>
+        <ion-input formControlName="chassi" placeholder="Insira o Chassi do veiculo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Placa do veiculo</ion-label>
+        <ion-input formControlName="placa" placeholder="Insira a placa do veiculo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">ano de Fabrica</ion-label>
+        <ion-input formControlName="fabrica" type="number" placeholder="Insira o ano de Fabrica"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">ano Modelo</ion-label>
+        <ion-input formControlName="ano" type="number" placeholder="Insira o ano Modelo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>tipo de gasolina</ion-label>
+        <ion-select formControlName="gasolina" placeholder="Selecione">
+          <ion-select-option value="Gasolina/Alcool">Gasolina/Alcool</ion-select-option>
+          <ion-select-option value="Diesel">Diesel</ion-select-option>
+          <ion-select-option value="Gasolina">Gasolina</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" [disabled]="!cadastrar.valid">Cadastrar Veiculo</ion-button>
+    </ion-list>
+  </form>
+</ion-content>
+

@@ -1,0 +1,27 @@
+ion-item {
+  --background: rgba(255, 255, 255, 0.8); /* Fundo branco transparente */
+  --border-radius: 10px; /* Bordas arredondadas */
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  margin: 10px 0; /* Espaçamento superior e inferior */
+  padding: 10px; /* Espaçamento interno */
+}
+
+ion-icon {
+  color: #3880ff; /* Cor dos ícones */
+}
+
+ion-label {
+  color: #333; /* Cor do texto */
+  font-weight: bold;
+}
+ion-list {
+  background: transparent;
+}
+ion-content {
+  --background: linear-gradient(to bottom right, #ffffff, #c4c4c4);
+  padding: 16px;
+}
+.title {
+  font-size: 24px; /* Tamanho da fonte */
+  text-align: center; 
+}

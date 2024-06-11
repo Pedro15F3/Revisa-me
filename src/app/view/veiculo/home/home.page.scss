@@ -1,0 +1,67 @@
+ion-content {
+  --background: linear-gradient(to bottom right, #ffffff, #c4c4c4);
+  padding: 16px;
+}
+
+/* Estilos para o Card */
+ion-card {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona sombra para profundidade */
+}
+
+/* Estilos para o Botão */
+ion-button {
+  margin-top: 10px;
+  border-radius: 12px; /* Arredonda as bordas dos botões */
+  --background: #5b77b4; /* Azul moderno */
+  --background-hover: #2e4677; /* Azul escuro para hover */
+  --color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  transition: background-color 0.3s ease;
+}
+
+ion-button ion-icon {
+  margin-right: 8px;
+}
+
+/* Estilos para a Linha de Ações */
+.actions-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Espaçamento entre as ações e o conteúdo acima */
+}
+
+.action-item {
+  text-align: center;
+}
+
+.action-item ion-button {
+  margin-bottom: 5px;
+}
+
+/* Estilos para a Lista Premium */
+ion-list.premium-list {
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Fundo branco transparente */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona sombra para profundidade */
+}
+
+ion-item.premium-item {
+  --background: #f5f5f5;
+  --color: #333;
+  border-radius: 15px;
+  margin-bottom: 10px; /* Espaçamento entre itens */
+  transition: background-color 0.3s ease;
+}
+
+ion-item.premium-item:hover {
+  --background: #eaeaea;
+}
+
+ion-icon {
+  color: #0755ff; 
+}

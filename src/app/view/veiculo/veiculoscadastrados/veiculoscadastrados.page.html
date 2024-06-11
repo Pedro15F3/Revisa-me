@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true">
+  <!-- List of vehicles -->
+  <ion-list>
+    <ng-container *ngFor="let item of revisa_me">
+      <ion-item *ngIf="item.ano" class="vehicle-item" (click)="editar(item)">
+        <ion-icon slot="start" name="car-outline" class="vehicle-icon"></ion-icon>
+        <ion-label class="vehicle-label">{{ item.modelo }}</ion-label>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+
+  <!-- Floating action button (FAB) to add a new vehicle -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="irParaCadastro()" class="fab-button">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

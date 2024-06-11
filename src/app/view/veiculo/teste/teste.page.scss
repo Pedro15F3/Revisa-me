@@ -1,0 +1,32 @@
+/* Estilo para os itens da lista de horários disponíveis */
+ion-item {
+  --highlight-color-focused: transparent; /* Remove a cor de destaque ao clicar */
+  --min-height: 48px; /* Altura mínima */
+  font-size: 16px; /* Tamanho da fonte */
+  border-radius: 10px; /* Bordas arredondadas */
+  border: 1px solid transparent; /* Adiciona uma borda transparente */
+}
+
+/* Estilo para os itens da lista de horários selecionados */
+ion-item.selected {
+  border-color: #007bff; /* Cor da borda */
+}
+
+/* Estilo para os horários selecionados */
+ion-item.selected .item-inner {
+  background-color: #007bff; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+}
+
+/* Estilo para o botão de salvar horário */
+ion-button {
+  margin-top: 16px; /* Margem superior */
+  --background: #007bff; /* Cor de fundo */
+  --color: #fff; /* Cor do texto */
+  --border-radius: 10px; /* Bordas arredondadas */
+}
+
+ion-content {
+  --background: linear-gradient(to bottom right, #ffffff, #c4c4c4);
+  padding: 16px;
+}

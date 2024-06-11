@@ -1,0 +1,51 @@
+<ion-content class="custom-content">
+  <ion-searchbar (ionChange)="buscarVeiculo($event)" class="search-bar"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let veiculo of veiculosFiltrados" class="vehicle-item" lines="none">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <ion-label class="vehicle-label"><strong>Modelo:</strong></ion-label>
+          </ion-col>
+          <ion-col size="8">
+            <ion-label class="vehicle-info">{{ veiculo.modelo }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-label class="vehicle-label"><strong>Placa:</strong></ion-label>
+          </ion-col>
+          <ion-col size="8">
+            <ion-label class="vehicle-info">{{ veiculo.placa }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-label class="vehicle-label"><strong>Chassi:</strong></ion-label>
+          </ion-col>
+          <ion-col size="8">
+            <ion-label class="vehicle-info">{{ veiculo.chassi }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-label class="vehicle-label"><strong>Ano Modelo:</strong></ion-label>
+          </ion-col>
+          <ion-col size="8">
+            <ion-label class="vehicle-info">{{ veiculo.ano }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-label class="vehicle-label"><strong>Tipo de Gasolina:</strong></ion-label>
+          </ion-col>
+          <ion-col size="8">
+            <ion-label class="vehicle-info">{{ veiculo.gasolina }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <!-- Adicione mais campos conforme necessário -->
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-content [fullscreen]="true">
+  <!-- Seleção de Veículo -->
+  <ion-item >
+    <ion-label>Selecione um veículo</ion-label>
+    <ion-select [(ngModel)]="selectedVehicle" interface="action-sheet" placeholder="Escolha um veículo">
+      <ion-select-option *ngFor="let item of revisa_me" [value]="item">
+        {{ item.modelo }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Formulário de Agendamento (exibido apenas se um veículo for selecionado) -->
+  <ng-container *ngIf="selectedVehicle">
+    <ion-item>
+      <ion-label>Selecione um dia</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" (ionChange)="onDateChange($event)" [min]="minDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item *ngIf="selectedDate">
+      <ion-label>Tipo de Serviço</ion-label>
+      <ion-select [(ngModel)]="selectedService" interface="action-sheet" placeholder="Selecione o serviço" required>
+        <ion-select-option value="Troca de óleo">Troca de óleo</ion-select-option>
+        <ion-select-option value="Revisão">Revisão</ion-select-option>
+        <ion-select-option value="Verificação">Verificação</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="selectedService">
+      <ion-label position="floating">Observação</ion-label>
+      <ion-textarea [(ngModel)]="observation" placeholder="Digite sua observação"></ion-textarea>
+    </ion-item>
+
+    <ion-list *ngIf="availableTimes.length > 0">
+      <ion-list-header>Horários Disponíveis</ion-list-header>
+      <ion-item *ngFor="let time of availableTimes" (click)="selectTime(time)" [class.selected]="time === selectedTime">
+        {{ time }}
+      </ion-item>
+    </ion-list>
+
+    <ion-text *ngIf="availableTimes.length === 0 && selectedDate">
+      <p>Não há horários disponíveis para esta data.</p>
+    </ion-text>
+
+    <ion-button expand="full" (click)="saveSelectedTime()" [disabled]="!selectedTime || !selectedService || !selectedVehicle">
+      Salvar Horário
+    </ion-button>
+  </ng-container>
+</ion-content>

@@ -1,0 +1,30 @@
+/* Estilo para o conteúdo da página */
+.custom-content {
+    --ion-background-color: #f5f5f5; /* Cor de fundo */
+  }
+  
+  /* Estilo para a barra de pesquisa */
+  .search-bar {
+    --background: #fff; /* Cor de fundo */
+    --border-radius: 10px; /* Bordas arredondadas */
+    --border-color: #ccc; /* Cor da borda */
+  }
+  
+  /* Estilo para os itens de veículo */
+  .vehicle-item {
+    --background: #fff; /* Cor de fundo */
+    --border-radius: 10px; /* Bordas arredondadas */
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 10px 0;
+  }
+  
+  /* Estilo para as informações do veículo */
+  .vehicle-info {
+    font-size: 16px; /* Tamanho da fonte */
+  }
+
+  ion-content {
+    --background: linear-gradient(to bottom right, #ffffff, #c4c4c4);
+    padding: 16px;
+  }
+  

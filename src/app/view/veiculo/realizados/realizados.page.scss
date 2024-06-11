@@ -1,0 +1,41 @@
+.texto-finalizado {
+    color: green;
+  }
+
+.texto-andamento {
+    color: rgb(228, 228, 43); 
+  }
+  
+.texto-cancelado {
+    color: red; 
+  }
+
+.texto-agendado {
+    color: blue; 
+  }
+
+  ion-content {
+    --background: linear-gradient(to bottom right, #ffffff, #c4c4c4);
+    padding: 16px;
+  }
+  .transparent-background {
+    background: transparent !important;
+}
+
+
+ion-list {
+    --background: transparent !important;
+}
+
+ion-item {
+    --background: transparent !important;
+}
+
+p {
+  color: black;
+}
+
+
+
+
+  

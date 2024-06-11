@@ -1,0 +1,19 @@
+/* Estilo para o conteúdo da página */
+ion-content {
+  --background: linear-gradient(to bottom right, #ffffff, #c4c4c4);
+  
+}
+
+/* Estilo para a lista de configurações */
+.config-list {
+  margin-top: 25px; /* Margem superior */
+}
+
+/* Estilo para os itens da lista de configurações */
+.config-item {
+  --ion-background-color: #d1cfcf; /* Cor de fundo */
+  --ion-text-color: #0f0f0f; /* Cor do texto */
+  --border-radius: 10px; /* Bordas arredondadas */
+  --inner-padding-end: 13px; /* Espaçamento interno à direita */
+}
+

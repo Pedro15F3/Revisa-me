@@ -1,0 +1,42 @@
+/* Estilo para o conteúdo da página */
+ion-content {
+    --background: linear-gradient(to bottom right, #ffffff, #c4c4c4);
+    padding: 16px;
+  }
+
+  .vehicle-item {
+    background-color: rgba(240, 240, 240, 0.9); /* Cor de fundo com transparência */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    border: 1px solid rgba(221, 221, 221, 0.8); /* Borda com transparência */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transição suave */
+}
+
+.vehicle-item:hover {
+    transform: translateY(-3px); /* Elevação ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+.vehicle-icon {
+    color: #3880ff; /* Cor do ícone */
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+.vehicle-label {
+    font-weight: bold; /* Texto em negrito */
+    font-size: 16px; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+
+.fab-button {
+    --background: #3880ff; /* Cor de fundo do botão */
+    --color: white; /* Cor do ícone */
+    --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+}
+
+.fab-button:active {
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra ao clicar */
+}
+
+
+

@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "projetotcc-ebedc",
+    "prod": "projetotcc-ebedc"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

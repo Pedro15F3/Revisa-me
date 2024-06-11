@@ -1,0 +1,24 @@
+<ion-content>
+
+  <ion-label class="title">Contatos</ion-label>
+
+  <ion-list>
+    <!-- Contato por Email -->
+    <ion-item button (click)="sendEmail()">
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-label>Email</ion-label>
+    </ion-item>
+
+    <!-- Contato por Ligação -->
+    <ion-item button (click)="makeCall()">
+      <ion-icon slot="start" name="call-outline"></ion-icon>
+      <ion-label>Ligação</ion-label>
+    </ion-item>
+
+    <!-- Contato por WhatsApp -->
+    <ion-item button (click)="openWhatsApp()">
+      <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+      <ion-label>WhatsApp</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

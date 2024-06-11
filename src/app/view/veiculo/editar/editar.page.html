@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+    <ion-item>
+      <ion-toggle (ionChange)="habilitar()">Habilitar Edição</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Modelo"  placeholder="Insira o Modelo" [(ngModel)]="modelo" disabled={{edicao}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Chassi"  placeholder="Insira o Chassi" [(ngModel)]="chassi" disabled={{edicao}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="placa"  placeholder="Insira o placa" [(ngModel)]="placa" disabled={{edicao}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="ano de Fabrica" type="number" placeholder="Insira o ano de Fabrica" [(ngModel)]="fabrica" disabled={{edicao}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="ano Modelo" type="number" placeholder="Insira o ano Modelo" [(ngModel)]="ano" disabled={{edicao}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="tipo de gasolina" placeholder="Selecione" [(ngModel)]="gasolina" disabled={{edicao}}>
+        <ion-select-option value="0">gasolina/alcool</ion-select-option>
+        <ion-select-option value="1">Diesel</ion-select-option>
+        <ion-select-option value="2">gasolina</ion-select-option>
+      </ion-select>
+    </ion-item>
+     <ion-button expand="full" (click)="editar()" disabled="{{edicao}}">Salvar</ion-button>
+     <ion-button expand="full" (click)="excluir()" color="danger" disabled="{{edicao}}">Excluir</ion-button>
+  </ion-list>
+</ion-content>
