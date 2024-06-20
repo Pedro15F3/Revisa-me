@@ -34,15 +34,17 @@ export class ConsultarClientePage implements OnInit {
   ngOnInit() {}
 
   buscarVeiculo(event: any) {
-    const placa = (event.detail.value || '').toString();
-    if (placa.trim() === '') {
+    const searchTerm = (event.detail.value || '').toString().trim().toLowerCase();
+    if (searchTerm === '') {
       this.veiculosFiltrados = this.veiculos;
     } else {
       this.veiculosFiltrados = this.veiculos.filter(veiculo =>
-        veiculo.placa.toLowerCase().includes(placa.toLowerCase())
+        veiculo.placa.toLowerCase().includes(searchTerm) ||
+        veiculo.chassi.toLowerCase().includes(searchTerm)
       );
     }
   }
+  
   
 }
 

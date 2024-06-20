@@ -88,11 +88,6 @@ const routes: Routes = [
     canActivate: [AuthGuardGuard]
   },
   {
-    path: 'editar-servico',
-    loadChildren: () => import('./view/funcionario/editar-servico/editar-servico.module').then( m => m.EditarServicoPageModule),
-    canActivate: [AuthGuardGuard]
-  },
-  {
     path: 'contato',
     loadChildren: () => import('./view/funcionario/contato/contato.module').then( m => m.ContatoPageModule),
     canActivate: [AuthGuardGuard]

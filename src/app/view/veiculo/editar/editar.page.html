@@ -27,9 +27,9 @@
 
     <ion-item>
       <ion-select label="tipo de gasolina" placeholder="Selecione" [(ngModel)]="gasolina" disabled={{edicao}}>
-        <ion-select-option value="0">gasolina/alcool</ion-select-option>
-        <ion-select-option value="1">Diesel</ion-select-option>
-        <ion-select-option value="2">gasolina</ion-select-option>
+        <ion-select-option value="Gasolina/Alcool">gasolina/alcool</ion-select-option>
+        <ion-select-option value="Diesel">Diesel</ion-select-option>
+        <ion-select-option value="Gasolina">gasolina</ion-select-option>
       </ion-select>
     </ion-item>
      <ion-button expand="full" (click)="editar()" disabled="{{edicao}}">Salvar</ion-button>

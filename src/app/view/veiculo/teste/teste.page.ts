@@ -6,12 +6,12 @@ import { Itens } from 'src/app/model/entities/Itens'; // Importe a interface Ite
 
 export interface Agendamento {
   id: string;
-  uid: string; // Adicione esta linha
+  uid: string;
   vehicle: {
     placa: string;
     ano: number;
     modelo: string;
-    uid: string; // Adicione esta linha
+    uid: string;
   };
   date: string;
   time: string;
@@ -19,7 +19,6 @@ export interface Agendamento {
   observation: string;
   status: string;
 }
-
 
 @Component({
   selector: 'app-teste',
@@ -61,14 +60,13 @@ export class TestePage implements OnInit {
       })).filter(item => item.ano); // Filtra os itens que possuem o campo "ano"
     });
 
-   // Buscar os agendamentos do usuário atual
-this.firebaseService.agendamentoCliente().subscribe(res => {
-  this.agendamentos = res.map(agendamento => ({
-    ...agendamento.payload.doc.data() as Agendamento,
-    id: agendamento.payload.doc.id
-  }));
-});
-
+    // Buscar os agendamentos do usuário atual
+    this.firebaseService.agendamentoCliente().subscribe(res => {
+      this.agendamentos = res.map(agendamento => ({
+        ...agendamento.payload.doc.data() as Agendamento,
+        id: agendamento.payload.doc.id
+      }));
+    });
   }
 
   async onDateChange(event: any) {
@@ -95,27 +93,33 @@ this.firebaseService.agendamentoCliente().subscribe(res => {
     this.selectedTime = time;
   }
 
+  formatDate(date: string): string {
+    const [year, month, day] = date.split('-');
+    return `${day}/${month}/${year}`;
+  }
+
   saveSelectedTime() {
     if (this.selectedVehicle && this.selectedDate && this.selectedTime && this.selectedService) {
+      const formattedDate = this.formatDate(this.selectedDate);
       const data = {
-        uid: this.selectedVehicle.uid, // Adicione esta linha
+        uid: this.selectedVehicle.uid,
         vehicle: {
           placa: this.selectedVehicle.placa,
           ano: this.selectedVehicle.ano,
           modelo: this.selectedVehicle.modelo,
-          uid: this.selectedVehicle.uid, // Adicione esta linha
+          uid: this.selectedVehicle.uid,
         },
-        date: this.selectedDate,
+        date: formattedDate,
         time: this.selectedTime,
         service: this.selectedService,
         observation: this.observation,
-        status: 'Agendado' // Definindo o status inicial como "Agendado"
+        status: 'Agendado'
       };
-  
+
       this.firebaseService.agendarHorario(data).then(() => {
         // Atualizar a lista revisa_me após o agendamento ser confirmado
         this.revisa_me = this.revisa_me.filter(item => item.placa !== this.selectedVehicle!.placa);
-  
+
         this.router.navigate(['/home']);
         console.log('Horário agendado com sucesso!');
         this.selectedTime = null;
@@ -131,4 +135,4 @@ this.firebaseService.agendamentoCliente().subscribe(res => {
       console.error('Veículo, data, horário ou tipo de serviço não selecionado');
     }
   }
-}  
+}
